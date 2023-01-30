@@ -85,7 +85,7 @@ For passwordless sign-in to work, users should disable legacy notification throu
 1. Follow the steps at [Enable passwordless phone sign-in authentication](../authentication/howto-authentication-passwordless-phone.md#enable-passwordless-phone-sign-in-authentication-methods)
 
    >[!IMPORTANT]
-   >In the above configuration under step 4, please choose **Passwordless** option. Change the mode for each groups added for PSI for **Authentication mode**, choose      **Passwordless** for passwordless sign-in to work with CBA.
+   >In the above configuration under step 4, please choose **Passwordless** option. Change the mode for each groups added for PSI for **Authentication mode**, choose      **Passwordless** for passwordless sign-in to work with CBA. If you choose **Any** PSI will not work with CBA
 
 1. Select **Azure Active Directory** > **Security** > **Multifactor authentication** > **Additional cloud-based multifactor authentication settings**.
 
@@ -94,6 +94,12 @@ For passwordless sign-in to work, users should disable legacy notification throu
 1. Under **Verification options**, clear the **Notification through mobile app** checkbox and click **Save**.
 
    :::image type="content" border="true" source="./media/concept-certificate-based-authentication-technical-deep-dive/clear-notification.png" alt-text="Screenshot of how to remove notification through mobile app.":::
+
+1. User needs to [**Enable phone sign-in**]((../authentication/howto-authentication-passwordless-phone.md#user-registration)) on the Authenticator app
+
+1. User need to register for the [passwordless authentication method of Azure AD](../authentication/howto-authentication-passwordless-phone.md#user-registration)
+
+1. Make sure that Microsoft Authenticator registration type in My security-info is **Passwordless phone sign-in**. More info at (../authentication/concept-authentication-authenticator-app.md#determining-microsoft-authenticator-registration-type-in-my-security-info )
 
 ## MFA authentication flow using single factor certificates and passwordless sign in
 
